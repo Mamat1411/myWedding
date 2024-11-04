@@ -8,7 +8,7 @@
 body {
   font-size: 1.2rem;
   font-family: "Alegreya Sans", sans-serif;
-  min-height: 2000px;
+  min-height: 4000px;
 }
 
 .hero::before {
@@ -62,6 +62,16 @@ body {
   color: white;
 }
 
+.my-navbar .navbar-brand,
+.my-navbar .offcanvas-title{
+    font-size: 2rem;
+}
+
+.my-navbar .nav-link{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 /* Media Query */
 /* Laptops */
 @media (max-width: 992px) {
@@ -84,6 +94,10 @@ body {
     padding: 60px;
     margin: 5px;
   }
+
+  .my-navbar .nav-link{
+    text-align: center;
+}
 }
 
 /* Mobile Phones */
