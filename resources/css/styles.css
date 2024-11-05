@@ -90,7 +90,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   margin-top: -4.6rem;
-  padding-top: 15rem;
+  padding-top: 7rem;
   padding-bottom: 5rem;
 }
 
@@ -137,7 +137,7 @@ body {
 .info{
   background-color: var(--bg);
   color: white;
-  padding-top: 10rem;
+  padding-top: 7rem;
   padding-bottom: 8rem;
 }
 
