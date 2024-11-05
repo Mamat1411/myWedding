@@ -2,7 +2,7 @@
   --pink: #f14e95;
   --bg: #0a0a0a;
   --shadow-white: 0 2px 2px rgba(255, 255, 255, 0.5);
-  --shadow-dark: 0 2px 2px rgba(0, 0, 0, 0.5)
+  --shadow-dark: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -62,17 +62,86 @@ body {
   color: white;
 }
 
-.my-navbar .navbar-brand,
-.my-navbar .offcanvas-title{
-    font-size: 2rem;
+.my-navbar {
+  background-color: rgba(255, 255, 255, 0) !important;
+  backdrop-filter: blur(4px);
 }
 
-.my-navbar .nav-link{
-    font-weight: 600;
-    text-transform: uppercase;
+.my-navbar .offcanvas {
+  height: 100vh;
+}
+
+.my-navbar .navbar-brand,
+.my-navbar .offcanvas-title {
+  font-size: 2rem;
+}
+
+.my-navbar .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(../img/bg-invitation-1.png);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -4.6rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+.home h2 {
+  color: var(--pink);
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: var(--shadow-dark);
+}
+
+.home h3 {
+  margin-bottom: 1rem;
+}
+
+.home .couple h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  color: var(--pink);
+  text-shadow: var(--shadow-dark);
+}
+
+.home .couple img{
+  width: 100%;
+}
+
+.home .heart{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(65px);
+}
+
+.home .heart i{
+  color: var(--pink);
+  margin: auto;
 }
 
 /* Media Query */
+/* Extra Large */
+@media (max-width: 1200px) {
+  .home .heart{
+    transform: translateX(-50%) translateY(45px);
+  }
+}
+
 /* Laptops */
 @media (max-width: 992px) {
   html {
@@ -81,6 +150,10 @@ body {
 
   .simply-countdown > .simply-section {
     padding: 70px;
+  }
+
+  .home .heart{
+    display: none;
   }
 }
 
@@ -95,9 +168,9 @@ body {
     margin: 5px;
   }
 
-  .my-navbar .nav-link{
+  .my-navbar .nav-link {
     text-align: center;
-}
+  }
 }
 
 /* Mobile Phones */
