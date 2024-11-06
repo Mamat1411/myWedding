@@ -207,6 +207,10 @@ body {
   .my-navbar .nav-link {
     text-align: center;
   }
+
+  .sticky-top{
+    overflow: hidden;
+  }
 }
 
 /* Mobile Phones */
