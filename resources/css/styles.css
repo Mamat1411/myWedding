@@ -96,7 +96,8 @@ body {
 
 .home h2,
 .info h2,
-.story h2 {
+.story h2,
+.gallery h2 {
   color: var(--pink);
   font-family: "Dancing Script", cursive;
   font-size: 4rem;
@@ -173,12 +174,12 @@ body {
   font-size: 0.9rem;
 }
 
-.story {
+.story, .gallery {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
-.story span {
+.story span, .gallery span {
   font-weight: bold;
   text-transform: uppercase;
   color: #666;
@@ -281,6 +282,10 @@ body {
   border-right-width: 14px;
   left: -13.5px;
   right: auto;
+}
+
+.gallery {
+  background-color: #ffd4e6;
 }
 
 /* Media Query */
