@@ -1,3 +1,9 @@
+const rootElement = document.querySelector(':root');
+const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+const audioIcon = document.querySelector('.audio-icon-wrapper i');
+const audio = document.querySelector('#bgm');
+let isPlaying = false;
+
 simplyCountdown('.simply-countdown', {
   year: 2025, // required
   month: 2, // required
@@ -23,8 +29,6 @@ offCanvas.addEventListener('hidden.bs.offcanvas', function () {
   stickyTop.style.overflow = 'hidden';
 });
 
-const rootElement = document.querySelector(':root');
-
 function disableScroll() {
   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -38,9 +42,28 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {  };
   rootElement.style.scrollBehavior = 'smooth';
-  localStorage.setItem('opened', 'true');
+  playAudio();
 }
 
-if (!localStorage.getItem('opened')) {
-  disableScroll();  
+disableScroll();
+
+function playAudio() {
+  audio.volume = 0.015;
+  audioIconWrapper.style.display = 'flex';
+  audio.play();
+  isPlaying = true;
+}
+
+function playOrPause() {
+  if (isPlaying) {
+    audioIcon.classList.add('fa-circle-play');
+    audioIcon.classList.remove('fa-circle-pause');
+    audio.pause();
+  } else {
+    audioIcon.classList.remove('fa-circle-play');
+    audioIcon.classList.add('fa-circle-pause');
+    audio.play();
+  }
+
+  isPlaying = !isPlaying;
 }
