@@ -48,7 +48,7 @@ function enableScroll() {
 disableScroll();
 
 function playAudio() {
-  audio.volume = 0.015;
+  audio.volume = 0.017;
   audioIconWrapper.style.display = 'flex';
   audio.play();
   isPlaying = true;
