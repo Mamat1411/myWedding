@@ -288,6 +288,10 @@ body {
   background-color: #ffd4e6;
 }
 
+footer {
+  padding: 3rem;
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {
