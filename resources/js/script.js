@@ -83,3 +83,11 @@ window.addEventListener("load", function() {
     })
   });
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+const guest = urlParams.get('nama') || '';
+const pronoun = urlParams.get('pronoun') || 'Bapak/Ibu/Saudara/i';
+const guestSpan = document.querySelector('.hero h4 span');
+guestSpan.innerText = `${pronoun} ${guest},`;
+
+document.querySelector('#name').value = guest;
