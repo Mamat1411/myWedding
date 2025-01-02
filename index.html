@@ -55,9 +55,11 @@
         <div class="offcanvas-body">
           <div class="navbar-nav ms-auto">
             <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="#info">Info</a>
-            <a class="nav-link" href="#story">Story</a>
+            <a class="nav-link" href="#info">Informasi Acara</a>
+            <a class="nav-link" href="#story">Kisah Kami</a>
             <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#rsvp">Kehadiran</a>
+            <a class="nav-link" href="#gifts">Hadiah</a>
           </div>
         </div>
       </div>
@@ -309,6 +311,48 @@
                 class="img-fluid w-100 rounded" />
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="rsvp">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-10 text-center">
+          <h2>Konfirmasi Kehadiran</h2>
+          <p>
+            Isi form dibawah ini untuk melakukan konfirmasi kehadiran
+          </p>
+          <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="post" action="https://script.google.com/macros/s/AKfycbw31NSmLIiI0AQnLG299a09HyoNzi7XRTizCB07jC_EogHqs_aC1vSuC4xyRVoTxgGX/exec" id="my-form">
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" name="name" id="name">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="total" class="form-label">Jumlah</label>
+                <input type="number" class="form-control" name="total" id="total" min="1" max="5" length="1" value="1">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="confirmation" class="form-label">Kehadiran</label>
+                <select class="form-select" name="confirmation" id="confirmation">
+                  <option selected>Konfirmasi Kehadiran</option>
+                  <option value="hadir">Hadir</option>
+                  <option value="tidak">Tidak Hadir</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12" style="margin-top: 52px;">
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
