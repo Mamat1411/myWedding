@@ -100,7 +100,8 @@ body {
 .info h2,
 .story h2,
 .gallery h2,
-.rsvp h2 {
+.rsvp h2,
+.gifts h2 {
   color: var(--sky-blue);
   font-family: "Dancing Script", cursive;
   font-size: 4rem;
@@ -140,7 +141,7 @@ body {
   margin: auto;
 }
 
-.info, .rsvp {
+.info, .rsvp, .gifts {
   background-color: var(--bg);
   color: white;
   padding-top: 7rem;
@@ -190,7 +191,7 @@ body {
   padding-bottom: 5rem;
 }
 
-.story, .gallery, .rsvp {
+.story, .gallery {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -300,14 +301,32 @@ body {
   right: auto;
 }
 
+.rsvp {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
 .rsvp button:hover {
   background-color: white;
   color: var(--sky-blue);
   border: 1px solid white;
 }
 
+.gifts {
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+}
+
+.gifts span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
 footer {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 @keyframes rotate{
