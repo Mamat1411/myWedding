@@ -85,8 +85,8 @@ window.addEventListener("load", function() {
 });
 
 const urlParams = new URLSearchParams(window.location.search);
-const guest = urlParams.get('nama') || '';
-const pronoun = urlParams.get('pronoun') || 'Bapak/Ibu/Saudara/i';
+const guest = urlParams.get('n') || '';
+const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
 const guestSpan = document.querySelector('.hero h4 span');
 guestSpan.innerText = `${pronoun} ${guest},`;
 
