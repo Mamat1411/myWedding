@@ -32,7 +32,7 @@
       </video> -->
       <h4>Kepada <span></span></h4>
       <h1>Sari & Mamat</h1>
-      <p>Akan melangsungkan Akad Nikah dalam:</p>
+      <p>Akan melangsungkan Akad Nikah dan Walimah dalam:</p>
       <div class="simply-countdown"></div>
       <a href="#home" class="btn btn-lg mt-2" onclick="enableScroll()">Lihat Undangan</a>
     </main>
@@ -57,7 +57,7 @@
             <a class="nav-link" href="#home">Home</a>
             <a class="nav-link" href="#info">Acara</a>
             <a class="nav-link" href="#story">Kisah Kami</a>
-            <a class="nav-link" href="#gallery">Gallery</a>
+            <!-- <a class="nav-link" href="#gallery">Gallery</a> -->
             <a class="nav-link" href="#rsvp">Kehadiran</a>
             <a class="nav-link" href="#gifts">Hadiah</a>
           </div>
@@ -152,7 +152,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <i class="fa-regular fa-clock d-block"></i>
-                  <span>09.00 - 11.00</span>
+                  <span>08.00 - 10.00</span>
                 </div>
                 <div class="col-md-6">
                   <i class="fa-solid fa-calendar-days d-block"></i>
@@ -174,7 +174,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <i class="fa-regular fa-clock d-block"></i>
-                  <span>11.00 - Selesai</span>
+                  <span>10.00 - Selesai</span>
                 </div>
                 <div class="col-md-6">
                   <i class="fa-solid fa-calendar-days d-block"></i>
@@ -183,7 +183,7 @@
               </div>
             </div>
             <div class="card-footer">
-              Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan
+              Saat acara walimah diharapkan untuk kondusif menjaga kekhidmatan
               dan kekhusyu'an seluruh prosesi
             </div>
           </div>
@@ -260,7 +260,7 @@
     </div>
   </section>
 
-  <section id="gallery" class="gallery">
+  <!-- <section id="gallery" class="gallery">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
@@ -318,7 +318,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="rsvp" class="rsvp">
     <div class="container">
@@ -374,23 +374,67 @@
           <p>
             Doa restu Anda merupakan karunia yang sangat berarti bagi kami.
             Namun jika memberi hadiah merupakan ungkapan tanda kasih Anda, Anda dapat mengirimkan hadiah melalui
-            rekening berikut :
+            tautan berikut :
           </p>
         </div>
       </div>
 
       <div class="row justify-content-center text-center">
         <div class="col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <div class="fw-bold">BCA</div>
-              0240422263 - Muhammad Mujahid
-            </li>
-            <li class="list-group-item">
-              <div class="fw-bold">BCA</div>
-              7901162305 - Sari Setyaningsih
-            </li>
-          </ul>
+          <button type="button" class="btn btn-lg btn-primary me-3" data-bs-toggle="modal" data-bs-target="#bankAccount">
+            Kirim Amplop
+          </button>
+          <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#gift">
+            Kirim Kado
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="bankAccount" tabindex="-1" aria-labelledby="bankAccountLabel" data-bs-theme="dark" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="bankAccountLabel">Kirim Amplop</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <ul class="list-group" data-bs-theme="light">
+              <li class="list-group-item">
+                <div class="fw-bold">BCA</div>
+                0240422263 - Muhammad Mujahid
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">BCA</div>
+                7901162305 - Sari Setyaningsih
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="gift" tabindex="-1" aria-labelledby="giftLabel" data-bs-theme="dark" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="giftLabel">Kirim Kado</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <ul class="list-group" data-bs-theme="light">
+              <li class="list-group-item">
+                <div class="fw-bold">Alamat Tujuan Kirim</div>
+                Bajang RT04 RW04, Wijirejo, Pandak, Kabupaten Bantul, D.I Yogyakarta
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
