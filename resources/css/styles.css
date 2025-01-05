@@ -118,7 +118,7 @@ body {
   min-height: 100vh;
   margin-top: -4.6rem;
   padding-top: 5rem;
-  padding-bottom: 10rem;
+  /* padding-bottom: 5rem; */
 }
 
 .opening {

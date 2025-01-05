@@ -30,7 +30,7 @@
       <!-- <video autoplay loop muted id="myVideo">
         <source src="./resources/vid/Birds.mp4" type="video/mp4" />
       </video> -->
-      <h4>Kepada <span></span></h4>
+      <h4>Kepada Yang Terhormat <span></span></h4>
       <h1>Sari & Mamat</h1>
       <p>Akan melangsungkan Akad Nikah dan Walimah dalam:</p>
       <div class="simply-countdown"></div>
@@ -353,39 +353,52 @@
         <div class="col-md-8 col-10 text-center">
           <h2>Konfirmasi Kehadiran</h2>
           <p>
-            Isi form dibawah ini untuk melakukan konfirmasi kehadiran
+            Isi form dibawah ini untuk melakukan konfirmasi kehadiran dan kirim ucapan
           </p>
         </div>
       </div>
 
-      <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="post"
+      <form class="align-items-center justify-content-center" method="post"
         action="https://script.google.com/macros/s/AKfycbw31NSmLIiI0AQnLG299a09HyoNzi7XRTizCB07jC_EogHqs_aC1vSuC4xyRVoTxgGX/exec"
         id="my-form">
-        <div class="col-12">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nama</label>
-            <input type="text" class="form-control" name="name" id="name">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama</label>
+              <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="total" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" name="total" id="total" min="1" max="5" length="1" value="1">
+            </div>
+            <div class="mb-3">
+              <label for="confirmation" class="form-label">Kehadiran</label>
+              <select class="form-select" name="confirmation" id="confirmation">
+                <option selected>Konfirmasi Kehadiran</option>
+                <option value="hadir">Hadir</option>
+                <option value="tidak">Tidak Hadir</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Ucapan</label>
+              <textarea class="form-control" id="message" rows="3" name="message"></textarea>          
+            </div><div class="mb-3">
+              <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
           </div>
-        </div>
-        <div class="col-12">
-          <div class="mb-3">
-            <label for="total" class="form-label">Jumlah</label>
-            <input type="number" class="form-control" name="total" id="total" min="1" max="5" length="1" value="1">
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="mb-3">
-            <label for="confirmation" class="form-label">Kehadiran</label>
-            <select class="form-select" name="confirmation" id="confirmation">
-              <option selected>Konfirmasi Kehadiran</option>
-              <option value="hadir">Hadir</option>
-              <option value="tidak">Tidak Hadir</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-12" style="margin-top: 52px;">
-          <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Simpan</button>
+          <div class="col-6 bg-body-tertiary p-3 rounded-2 overflow-auto" data-bs-theme="dark" style="height: 400px; width: 50%;">
+            <div id="messages">
+              <h4>First heading</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum assumenda, beatae aperiam fuga natus quaerat doloribus facilis itaque harum nisi quia, modi architecto sit eaque porro nobis dignissimos? Ut amet ipsam nisi labore repellat, voluptas perspiciatis suscipit quae eligendi!</p>
+              <h4>Second heading</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum assumenda, beatae aperiam fuga natus quaerat doloribus facilis itaque harum nisi quia, modi architecto sit eaque porro nobis dignissimos? Ut amet ipsam nisi labore repellat, voluptas perspiciatis suscipit quae eligendi!</p>
+              <h4>Third heading</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum assumenda, beatae aperiam fuga natus quaerat doloribus facilis itaque harum nisi quia, modi architecto sit eaque porro nobis dignissimos? Ut amet ipsam nisi labore repellat, voluptas perspiciatis suscipit quae eligendi!</p>
+              <h4>Fourth heading</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum assumenda, beatae aperiam fuga natus quaerat doloribus facilis itaque harum nisi quia, modi architecto sit eaque porro nobis dignissimos? Ut amet ipsam nisi labore repellat, voluptas perspiciatis suscipit quae eligendi!</p>
+              <h4>Fifth heading</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum assumenda, beatae aperiam fuga natus quaerat doloribus facilis itaque harum nisi quia, modi architecto sit eaque porro nobis dignissimos? Ut amet ipsam nisi labore repellat, voluptas perspiciatis suscipit quae eligendi!</p>
+            </div>
           </div>
         </div>
       </form>
@@ -429,11 +442,11 @@
             <ul class="list-group" data-bs-theme="light">
               <li class="list-group-item">
                 <div class="fw-bold">BCA</div>
-                0240422263 - Muhammad Mujahid
+                0240422263 - Muhammad Mujahid <button class="btn btn-light copy-to-clipboard" onclick="copyToClipboard(this)"><i class="fa-solid fa-copy"></i></button>
               </li>
               <li class="list-group-item">
-                <div class="fw-bold">BCA</div>
-                7901162305 - Sari Setyaningsih
+                <div class="fw-bold">Mandiri</div>
+                1370022129445 - Sari Setyaningsih <button class="btn btn-light copy-to-clipboard" onclick="copyToClipboard(this)"><i class="fa-solid fa-copy"></i></button>
               </li>
             </ul>
           </div>

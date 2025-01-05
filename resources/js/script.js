@@ -68,6 +68,37 @@ function playOrPause() {
   isPlaying = !isPlaying;
 }
 
+function copyToClipboard(button) {
+  let buttonContents = button.closest('.list-group-item');
+  const matched = buttonContents.textContent.trim().match(/\d+/);
+  const copied = matched ? matched[0] : '';
+  
+  if (copied) {
+    navigator.clipboard.writeText(copied)
+    .then(() => {
+      // Add Bootstrap tooltip attributes dynamically
+      button.setAttribute('data-bs-toggle', 'tooltip');
+      button.setAttribute('data-bs-placement', 'top');
+      button.setAttribute('title', 'Copied!');
+
+      // Initialize and show the tooltip
+      const tooltip = new bootstrap.Tooltip(button);
+      tooltip.show();
+
+      // Cleanup the tooltip after 2 seconds
+      setTimeout(() => {
+          tooltip.dispose(); // Remove the tooltip
+          button.removeAttribute('data-bs-toggle'); // Optional: Remove the attributes
+          button.removeAttribute('title');
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+  });
+  } else {
+    console.log('error');
+  }
+}
+
 window.addEventListener("load", function() {
   const form = document.getElementById('my-form');
   form.addEventListener("submit", function(e) {
@@ -79,7 +110,7 @@ window.addEventListener("load", function() {
       body: data,
     })
     .then(() => {
-      alert("Konfirmasi Kehadiran Berhasil Terkirim!");
+      alert("Konfirmasi Kehadiran dan Ucapan Berhasil Terkirim!");
     })
   });
 });
