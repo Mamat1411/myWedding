@@ -540,3 +540,31 @@ footer {
     padding: 2rem;
   }
 }
+
+@media (max-width: 402px) {
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 322px) {
+  .simply-countdown > .simply-section {
+    padding: 30px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 283px) {
+  .simply-countdown > .simply-section {
+    padding: 20px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 245px) {
+  .simply-countdown > .simply-section {
+    padding: 10px;
+    margin: 1px;
+  }
+}
