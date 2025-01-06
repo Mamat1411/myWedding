@@ -1,8 +1,51 @@
+const spreadsheetId = '1xrrAZMsRQ1Qwuk9BhZFJi1y7Dtq-ck-DOw5Gx77orhQ';
+const apiKey = 'AIzaSyBqzgVml_Hcml9ve61g-OLapkB2SU3Dpsc';
+const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/Sheet1?key=${apiKey}`;
+
 const rootElement = document.querySelector(':root');
 const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
 const audioIcon = document.querySelector('.audio-icon-wrapper i');
 const audio = document.querySelector('#bgm');
 let isPlaying = false;
+
+async function fetchSheetData() {
+  try {
+      const response = await fetch(url);
+      if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+      }
+      const data = await response.json();
+      displayData(data.values); // Pass rows to the display function
+  } catch (error) {
+      console.error("Error fetching data:", error);
+  }
+}
+
+function displayData(rows) {
+  const sheetDataDiv = document.getElementById("messages");
+
+  if (rows && rows.length > 0) {
+      // Assume the first row contains headers, so skip it
+      const [headers, ...dataRows] = rows;
+
+      // Loop through the rows and create elements
+      dataRows.forEach(row => {
+          // Create an <h4> for "Name" and "Age"
+          const heading = document.createElement("h4");
+          heading.textContent = `${row[1]} (${row[3]})`; // e.g., "John (25 years old)"
+          sheetDataDiv.appendChild(heading);
+
+          // Create a <p> for "City"
+          const paragraph = document.createElement("p");
+          paragraph.textContent = row[4]; // e.g., "New York"
+          sheetDataDiv.appendChild(paragraph);
+      });
+  } else {
+      sheetDataDiv.textContent = "No data found in the sheet.";
+  }
+}
+
+fetchSheetData();
 
 simplyCountdown('.simply-countdown', {
   year: 2025, // required
@@ -101,16 +144,25 @@ function copyToClipboard(button) {
 
 window.addEventListener("load", function() {
   const form = document.getElementById('my-form');
+  const submitButton = document.querySelector('#my-form button');
+  const messageForm = document.getElementById('messages');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     const data = new FormData(form);
     const action = e.target.action;
+    submitButton.disabled = true;
+    const originalButton = submitButton.innerHTML;
+    submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" aria-hidden="true"></span> Menyimpan...';
     fetch(action, {
       method: 'POST',
       body: data,
     })
     .then(() => {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButton;
       alert("Konfirmasi Kehadiran dan Ucapan Berhasil Terkirim!");
+      messageForm.innerHTML = '';
+      fetchSheetData();
     })
   });
 });
